@@ -14,8 +14,178 @@
   }
 }
 
+/* Globals */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Set background color for the layout */
+.layout-body {
+  background-color: #f4f4f4; /* Use the grey color from the main page */
+  color: #333; /* Adjust text color for contrast */
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif; /* Ensure font consistency */
+  min-height: 100vh; /* Ensure the body covers the entire viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.header-phone {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation {
+  background-color: #f4f4f4;
+  padding: 1rem 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.nav-list li:hover .dropdown {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.hero {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Services Section */
+.services {
+  padding: 2rem 1rem; /* Add padding for spacing */
+  text-align: center;
+  background-color: #f4f4f4; /* Light grey background */
+}
+
+.services-header h1 {
+  font-family: 'Oswald', sans-serif;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+/* Responsive grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 1.5rem;
+  max-width: 1200px; /* Restrict the grid's width */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Service card styles */
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Footer styling */
+footer {
+  background-color: #fb7638; /* Orange background */
+  color: #fff; /* White text color */
+  padding: 0 1em; /* Padding around the text */
+  text-align: center; /* Center-align the text */
+  font-size: 12px;
+}
+
+/* Ensure footer is fixed at the bottom on larger screens */
+@media screen and (min-width: 980px) {
+  footer {
+    position: fixed; /* Fixed at the bottom */
+    bottom: 0;
+    width: 100%; /* Full width */
+    padding: 1em; /* Horizontal padding */
+  }
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
